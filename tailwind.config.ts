@@ -1,3 +1,4 @@
+import { NextRequest } from "next/server";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -7,10 +8,18 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'tablet': '640px',
+      'laptop': '1024px',
+      'desktop': '1280px',
+    },
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        maison: ["var(--maison-neue)"],
       },
     },
   },

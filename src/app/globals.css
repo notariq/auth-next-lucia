@@ -14,14 +14,33 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ededed;
+    --foreground: #0a0a0a;
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--maison-neue), Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+input {
+  all: unset;
+}
+
+input:focus {
+  border: none;
+}
+
+.default-border {
+  border: 2px #2e2e2e solid;
 }
